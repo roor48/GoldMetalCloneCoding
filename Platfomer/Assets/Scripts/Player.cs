@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
             return;
         Debug.DrawRay(rigid.position, Vector3.down * 0.5f, Color.green);
 
-        RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 0.5f, LayerMask.GetMask("Platform"));
+        RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector2.down, 0.5f, LayerMask.GetMask("Platform"));
 
         if (rayHit)
             anim.SetBool(isJumped, false);
